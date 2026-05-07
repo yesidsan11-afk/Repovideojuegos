@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de los Videojuegos</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+      color:#333;
+    }
+
+    header{
+      background:#222;
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+
+    nav{
+      background:#444;
+      padding:10px;
+      text-align:center;
+    }
+
+    nav button{
+      padding:10px 15px;
+      margin:5px;
+      border:none;
+      background:#00aaff;
+      color:white;
+      cursor:pointer;
+      border-radius:5px;
+    }
+
+    nav button:hover{
+      background:#0088cc;
+    }
+
+    #contenido{
+      max-width:900px;
+      margin:20px auto;
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    img{
+      width:100%;
+      border-radius:10px;
+      margin-top:15px;
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:15px;
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Historia de los Videojuegos</h1>
+    <h1>Videojuegos v 1.0 </h1>
+    <p>Evolución de los videojuegos a través del tiempo</p>
+  </header>
+
+  <nav>
+    <button onclick="mostrarHistoria('70')">Años 70</button>
+    <button onclick="mostrarHistoria('80')">Años 80</button>
+    <button onclick="mostrarHistoria('90')">Años 90</button>
+    <button onclick="mostrarHistoria('2000')">Años 2000</button>
+    <button onclick="mostrarHistoria('actualidad')">Actualidad</button>
+  </nav>
+
+  <section id="contenido">
+    <h2>Bienvenido</h2>
+    <p>
+      Los videojuegos han evolucionado desde simples gráficos en blanco y negro
+      hasta experiencias realistas y multijugador en línea.
+      Selecciona una época para conocer más.
+    </p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Pong.png" alt="Videojuegos">
+  </section>
+
+  <footer>
+    <p>Proyecto Front-End HTML + JavaScript</p>
+  </footer>
+
+  <script>
+    function mostrarHistoria(epoca){
+
+      let contenido = document.getElementById("contenido");
+
+      if(epoca === '70'){
+        contenido.innerHTML = `
+          <h2>Años 70</h2>
+          <p>
+            En los años 70 nacieron los primeros videojuegos arcade.
+            Uno de los más famosos fue Pong de Atari.
+          </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Pong.png">
+        `;
+      }
+
+      else if(epoca === '80'){
+        contenido.innerHTML = `
+          <h2>Años 80</h2>
+          <p>
+            La industria creció con consolas como Nintendo Entertainment System.
+            Aparecieron personajes icónicos como Mario y Pac-Man.
+          </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Super_Mario_Bros.png">
+        `;
+      }
+
+      else if(epoca === '90'){
+        contenido.innerHTML = `
+          <h2>Años 90</h2>
+          <p>
+            Los gráficos 3D revolucionaron los videojuegos.
+            Consolas como PlayStation y Nintendo 64 dominaron el mercado.
+          </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/PlayStation-SCPH-1000-with-Controller.jpg">
+        `;
+      }
+
+      else if(epoca === '2000'){
+        contenido.innerHTML = `
+          <h2>Años 2000</h2>
+          <p>
+            Los juegos online y las consolas modernas crecieron rápidamente.
+            Xbox, PlayStation 2 y Wii marcaron esta época.
+          </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Xbox-console.jpg">
+        `;
+      }
+
+      else if(epoca === 'actualidad'){
+        contenido.innerHTML = `
+          <h2>Actualidad</h2>
+          <p>
+            Actualmente los videojuegos incluyen realidad virtual,
+            inteligencia artificial y competencias eSports.
+          </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/PlayStation_5_and_DualSense.jpg">
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
